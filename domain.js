@@ -3,21 +3,23 @@ const ADJ = ['great', 'big'];
 const NOUN = ['jogger', 'racoon'];
 const EXTEN = ['.com','.es']
 
-
-const domain = () =>{
+const domain = () => {
+  const combination = []
   PRONOUM.forEach(function(p) {
       ADJ.forEach(function(a) {
         NOUN.forEach(function(n) {
           EXTEN.forEach(function(e) {
+            
             // console.log(p + a + n + e);
+           combination.push (`${p}${a}${n}${e}`)
           });
         });
       });
     });
-    return (p + a + n + e)
+    return combination
 }
 
-console.log(domain);
+console.log(domain());
 
 
 
